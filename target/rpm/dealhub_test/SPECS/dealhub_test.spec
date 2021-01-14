@@ -1,8 +1,8 @@
 %define _unpackaged_files_terminate_build 0
 %define __jar_repack 0
-Name: dealhub_calc
+Name: dealhub_test
 Version: 1.3
-Release: 1
+Release: SNAPSHOT20210114132642
 Summary: dealhub_test
 License: Prop License (c), DealHub
 Distribution: Test 1.0
@@ -12,7 +12,7 @@ autoprov: yes
 autoreq: yes
 Prefix: /opt/rpm-test
 BuildArch: noarch
-BuildRoot: /home/devops/git/test-git/target/rpm/dealhub_calc/buildroot
+BuildRoot: /home/devops/git/test-git/target/rpm/dealhub_test/buildroot
 
 %description
 
@@ -20,9 +20,9 @@ BuildRoot: /home/devops/git/test-git/target/rpm/dealhub_calc/buildroot
 
 if [ -d $RPM_BUILD_ROOT ];
 then
-  mv /home/devops/git/test-git/target/rpm/dealhub_calc/tmp-buildroot/* $RPM_BUILD_ROOT
+  mv /home/devops/git/test-git/target/rpm/dealhub_test/tmp-buildroot/* $RPM_BUILD_ROOT
 else
-  mv /home/devops/git/test-git/target/rpm/dealhub_calc/tmp-buildroot $RPM_BUILD_ROOT
+  mv /home/devops/git/test-git/target/rpm/dealhub_test/tmp-buildroot $RPM_BUILD_ROOT
 fi
 
 %files

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>dealhub_test</groupId>
     <artifactId>dealhub_test</artifactId>
-    <version>1.3</version>
+    <version>1.3-SNAPSHOT</version>
     <properties>
         <project.scm.id>git</project.scm.id>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -101,7 +101,6 @@
                     <!--icon>src/main/resources/icon.gif</icon -->
                     <packager>DealHub</packager>
                     <prefix>/opt/rpm-test</prefix>
-                    <name>dealhub_calc</name>
                     <!--changelogFile>src/changelog</changelogFile -->
                     <defineStatements>
                         <defineStatement>_unpackaged_files_terminate_build 0</defineStatement>
