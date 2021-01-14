@@ -4,13 +4,14 @@
 
     <groupId>dealhub_test</groupId>
     <artifactId>dealhub_test</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2</version>
     <properties>
         <project.scm.id>git</project.scm.id>
     </properties>
     <scm>        
         <developerConnection>scm:git:https://github.com/evgeniyy2003/test-git.git</developerConnection>
-    </scm>
+      <tag>dealhub_test-1.2</tag>
+  </scm>
     <dependencies>
         <dependency>
             <groupId>org.antlr</groupId>
