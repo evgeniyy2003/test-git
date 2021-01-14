@@ -2,7 +2,7 @@
 %define __jar_repack 0
 Name: dealhub_test
 Version: 1.3
-Release: SNAPSHOT20210114132642
+Release: SNAPSHOT20210114144431
 Summary: dealhub_test
 License: Prop License (c), DealHub
 Distribution: Test 1.0
