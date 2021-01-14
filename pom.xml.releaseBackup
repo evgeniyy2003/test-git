@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>dealhub_test</groupId>
     <artifactId>dealhub_test</artifactId>
-    <version>1.3</version>
+    <version>1.1-SNAPSHOT</version>
     <properties>
         <project.scm.id>git</project.scm.id>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <scm>
+    <scm>        
         <developerConnection>scm:git:https://github.com/evgeniyy2003/test-git.git</developerConnection>
-        <tag>HEAD</tag>
     </scm>
     <dependencies>
         <dependency>
@@ -18,26 +17,32 @@
             <artifactId>antlr4</artifactId>
             <version>4.3</version>
         </dependency>
+
         <dependency>
             <groupId>javax.cache</groupId>
             <artifactId>cache-api</artifactId>
             <version>0.8</version>
         </dependency>
+
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.6</version>
             <scope>test</scope>
         </dependency>
+
+
     </dependencies>
+
     <build>
-        <finalName>calc</finalName>
+
         <plugins>
             <plugin>
                 <groupId>org.antlr</groupId>
@@ -55,6 +60,7 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -68,6 +74,7 @@
                     </archive>
                 </configuration>
             </plugin>
+
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
@@ -82,60 +89,9 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>rpm-maven-plugin</artifactId>
-                <version>2.2.0</version>
-                <executions>
-                    <execution>
-                        <id>generate-rpm</id>
-                        <goals>
-                            <goal>rpm</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <license>Prop License (c), DealHub</license>
-                    <distribution>Test 1.0</distribution>
-                    <group>Application/Collectors</group>
-                    <!--icon>src/main/resources/icon.gif</icon -->
-                    <packager>DealHub</packager>
-                    <prefix>/opt/rpm-test</prefix>
-                    <name>dealhub_calc</name>
-                    <!--changelogFile>src/changelog</changelogFile -->
-                    <defineStatements>
-                        <defineStatement>_unpackaged_files_terminate_build 0</defineStatement>
-                    </defineStatements>
-                    <mappings>
-                        <mapping>
-                            <directory>/opt/rpm-test</directory>
-                            <filemode>755</filemode>
-                            <username>root</username>
-                            <!--groupname>root</groupname-->
-                            <sources>
-                                <source>
-                                    <location>target/calc.jar</location>
-                                </source>
-                                <source>
-                                    <location>src/script/calc</location>
-                                </source>
-                            </sources>
-                        </mapping>
-                        <mapping>
-                            <directory>/opt/rpm-test/lib</directory>
-                            <filemode>755</filemode>
-                            <username>root</username>
-                            <!--groupname>root</groupname-->
-                            <sources>
-                                <source>
-                                    <location>target/lib</location>
-                                </source>
-                            </sources>
-                        </mapping>
-                    </mappings>
-                    
-                </configuration>
-            </plugin>
+
         </plugins>
+
     </build>
+
 </project>

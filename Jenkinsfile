@@ -26,9 +26,17 @@ pipeline {
                 }
             }
         }
+        stage('Packing') {
+            steps {
+                echo 'Pack the project....'
+		sh 'mvn package'
+            }
+        }
+
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+		sh 'cd target/rpm/dealhub_calc/RPMS/noarch/ && for i in *.rpm; do echo $i; done'
             }
         }
     }
